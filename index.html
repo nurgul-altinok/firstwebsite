@@ -4,44 +4,119 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nurgül Altınok Portfolio</title>
+
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #333; color: white; padding: 20px; text-align: center; }
-    section { padding: 20px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; }
-    h1, h2 { color: #333; }
-    p { color: #666; line-height: 1.5; }
-    footer { text-align: center; padding: 10px; background: #333; color: white; margin-top: 40px; }
-    a { color: #007bff; text-decoration: none; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+      color: #dcdcdc;
+    }
+
+    section {
+      padding: 25px;
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #1e3c72;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1e3c72;
+      color: white;
+      margin-top: 50px;
+    }
+
+    a {
+      color: #2a5298;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Nurgül Altınok</h1>
-  <p>Computer Engineer | Freelancer Portfolio</p>
-</header>
+  <header class="animate__animated animate__fadeInDown">
+    <h1>Nurgül Altınok</h1>
+    <p>Computer Engineering Student | Trying Not to Break Things</p>
+  </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>Hello! I am a computer engineer passionate about technology and coding. This is my personal portfolio website.</p>
-</section>
+  <section class="animate__animated animate__fadeIn animate__delay-1s">
+    <h2>About Me</h2>
+    <p>
+      Hi! I’m Nurgül — a curious computer engineering student who's just started turning coffee into code ☕. 
+      Currently leveling up my skills with each bug I bravely debug 🐛💪. 
+      I love building little things that (usually) work and sometimes surprise me by actually compiling on the first try.
+      Still figuring it all out — but hey, aren’t we all?
+    </p>
+  </section>
 
-<section>
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>Project 1:</strong> Simple Portfolio Website</li>
-    <li><strong>Project 2:</strong> GitHub Pages Deployment</li>
-  </ul>
-</section>
+  <section class="animate__animated animate__fadeIn animate__delay-2s">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Project 1:</strong> Simple Portfolio Website</li>
+      <li><strong>Project 2:</strong> GitHub Pages Deployment</li>
+    </ul>
+  </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:nurgul@example.com">nurgul@example.com</a></p>
-</section>
+  <section class="animate__animated animate__fadeIn animate__delay-3s">
+    <h2>Contact</h2>
+    <p>Email:
+      <a href="mailto:nurgulaltnk@gmail.com">nurgulaltnk@gmail.com</a>
+    </p>
+  </section>
 
-<footer>
-  &copy; 2025 Nurgül Altınok
-</footer>
+  <footer class="animate__animated animate__fadeInUp animate__delay-4s">
+    &copy; 2025 Nurgül Altınok
+  </footer>
 
 </body>
 </html>
