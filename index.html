@@ -15,6 +15,8 @@
       margin: 0;
       padding: 0;
       background: #f4f4f4;
+      position: relative;
+      min-height: 100vh;
     }
 
     header {
@@ -79,6 +81,96 @@
     a:hover {
       text-decoration: underline;
     }
+
+
+    /* --- Sürpriz teşekkür kutusu stili --- */
+
+    .surprise-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 320px;
+      background: #e0d7f7; /* pastel mor */
+      border-radius: 18px;
+      box-shadow: 0 8px 16px rgba(46, 42, 95, 0.3);
+      padding: 20px;
+      font-family: 'Comic Sans MS', cursive;
+      color: #3e2f5b;
+      text-align: center;
+      display: none;
+      z-index: 9999;
+      user-select: none;
+    }
+
+    .surprise-container.show {
+      display: block;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .intro-text {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      background: #a595f9;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: white;
+      font-weight: 700;
+      box-shadow: 0 5px 15px rgba(165, 150, 250, 0.6);
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #7d6ee0;
+    }
+
+    .thank-you-note {
+      margin-top: 15px;
+      font-size: 1rem;
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      color: #5c4b8b;
+      border: 2px solid #a595f9;
+      display: none;
+      user-select: text;
+      line-height: 1.4;
+    }
+
+    .email-link {
+      display: inline-block;
+      margin-top: 10px;
+      background: #7d6ee0;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(125, 110, 224, 0.7);
+      transition: background 0.3s ease;
+    }
+
+    .email-link:hover {
+      background: #5c4b8b;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
   </style>
 </head>
 
@@ -104,6 +196,8 @@
     <ul>
       <li><strong>Project 1:</strong> Simple Portfolio Website</li>
       <li><strong>Project 2:</strong> GitHub Pages Deployment</li>
+      <li><strong>Project 3:</strong> Med AI - Sağlık Asistanı Python Projesi <a href="https://github.com/nurgul-altinok/med-ai" target="_blank">[GitHub]</a></li>
+      <li><strong>Project 4:</strong> Book Search - Google Books API ile Kitap Arama <a href="https://github.com/nurgul-altinok/book-search" target="_blank">[GitHub]</a></li>
     </ul>
   </section>
 
@@ -118,5 +212,37 @@
     &copy; 2025 Nurgül Altınok
   </footer>
 
+  <!-- Sürpriz teşekkür kutusu -->
+  <div class="surprise-container" id="surpriseBox">
+    <div class="intro-text" id="introText">I have a surprise for you! 🎁</div>
+    <button class="button" id="startBtn">YES, I'M READY! ✨</button>
+    <div class="thank-you-note" id="thankYouNote">
+      This is my first website! I'm so grateful for your support and encouragement during this journey. Thank you! 💜
+      <br><br>
+      <strong>For feedback, please click the button below:</strong>
+      <br>
+      <a href="mailto:nurgulaltnk@gmail.com?subject=Website%20Feedback" class="email-link">Send Feedback</a>
+    </div>
+  </div>
+
+  <script>
+    const surpriseBox = document.getElementById('surpriseBox');
+    const startBtn = document.getElementById('startBtn');
+    const introText = document.getElementById('introText');
+    const thankYouNote = document.getElementById('thankYouNote');
+
+    // Sayfa en alta kaydırılınca surpriseBox göster
+    window.addEventListener('scroll', () => {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        surpriseBox.classList.add('show');
+      }
+    });
+
+    startBtn.addEventListener('click', () => {
+      introText.style.display = 'none';
+      startBtn.style.display = 'none';
+      thankYouNote.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
